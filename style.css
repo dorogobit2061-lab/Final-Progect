@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.hero {
+  height: 100vh;
+  background: url('/img/fon.png') center/cover no-repeat;
+  padding: 30px 60px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.hero-text {
+  max-width: 500px;
+  margin-top: 120px;
+}
+
+.hero-text h1 {
+  font-size: 52px;
+  font-weight: 300;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  color: #ccc;
+}
+
+button {
+  background: #c18b52;
+  border: none;
+  padding: 10px 25px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: -120px;
+}
+
+.product {
+  background: #2a2a2a;
+  padding: 20px;
+  text-align: center;
+  width: 220px;
+}
+
+.product img {
+  width: 120px;
+}
+
+.highlight {
+  background: #d9a55f;
+  color: #000;
+}
+
+.menu {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.menu-item {
+  border: 1px solid #555;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-item h3 {
+  margin-top: 10px;
+}
+
+.menu-item button {
+  margin-top: auto;
+}
+
+.menu-item img {
+  width: 200px;
+}
+
+.quality {
+  padding: 80px 60px;
+  background: #1b1b1b;
+  background-image: url('/img/fon2.png');
+}
+
+.quality-items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.quality-item {
+  width: 30%;
+  position: relative;
+  text-align: center;
+}
+
+.quality-item img {
+  width: 70%;
+  
+}
+
+.quality h2 {
+  text-align: right;
+  margin-right: 200px;
+  font-size: 64px;
+  font-family: Italiana, sans-serif;
+} 
+
+.quality-item ul {
+  background: gray;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.quality-item li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+
+
