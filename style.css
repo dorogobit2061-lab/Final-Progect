@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- font-family: Inter, sans-serif;
-
+  font-family: Inter, sans-serif;
 }
 
 body {
@@ -15,6 +14,19 @@ body {
   height: 100vh;
   background: url('./img/fon.png') center/cover no-repeat;
   padding: 30px 60px;
+  position: relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero *{
+  position: relative;
+  z-index: 2;
 }
 
 .nav {
@@ -32,98 +44,212 @@ body {
 .nav a {
   color: #ddd;
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+.nav a:hover{
+  opacity: 1;
 }
 
 .hero-text {
-  max-width: 500px;
-  margin-top: 120px;
+  max-width: 520px;
+  margin-top: 140px;
 }
 
 .hero-text h1 {
-  font-size: 52px;
+  font-size: 64px;
   font-weight: 300;
+  letter-spacing: 4px;
 }
 
 .hero-text p {
   margin: 20px 0;
   color: #ccc;
+  line-height: 1.6;
+  opacity: 0.85;
 }
 
-button {
+.hero-text button {
+  margin-top: 25px;
+  padding: 14px 40px;
   background: #c18b52;
   border: none;
-  padding: 10px 25px;
   color: #fff;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.hero-text button:hover{
+  background:#b6793f;
 }
 
 .products {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-top: -120px;
+  margin-top: -140px;
+  position: relative;
+  z-index: 5;
 }
 
 .product {
-  background: #2a2a2a;
-  padding: 20px;
+  background:#1f1f1f;
+  padding: 30px 20px;
   text-align: center;
-  width: 220px;
+  width: 260px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  transition: .3s;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product:hover{
+  transform: translateY(-12px);
+}
+
+.product:not(.highlight){
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: 15px;
 }
 
 .product img {
-  width: 120px;
+  width:130px;
+  margin-bottom: 15px;
 }
 
-.highlight {
-  background: #d9a55f;
-  color: #000;
+.product:not(.highlight) img{
+  width: 90px;
+  margin: 0;
+}
+
+.product p {
+  line-height: 1.5;
+  font-size: 15px;
+  opacity: .9;
+}
+
+.product:not(.highlight) p{
+  margin: 0;
+  flex: 1;
+}
+
+.product button {
+  margin-top: 15px;
+  background:#e07a2d;
+  border:none;
+  color:#fff;
+  padding:10px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.product:not(.highlight) button{
+  margin-left: auto;
+  margin-top: 0;
+}
+
+.product button:hover{
+  background:#c56620;
+}
+
+.product.highlight{
+  background:#d9a55f;
+  color:#000;
+  transform: translateY(-15px);
+  flex-direction: column;
+}
+
+.product.highlight p{
+  color:#000;
+  text-align: center;
+}
+
+.product.highlight button{
+  background:#e07a2d;
+  color:#fff;
 }
 
 .menu {
-  padding: 80px 60px;
+  padding: 100px 60px;
   text-align: center;
+}
+
+.menu h2{
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 3px;
 }
 
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  margin-top: 40px;
+  gap: 50px;
+  margin-top: 50px;
 }
 
 .menu-item {
-  border: 1px solid #555;
-  padding: 25px;
+  background:#1f1f1f;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition:.3s;
 }
 
-.menu-item h3 {
-  margin-top: 10px;
+.menu-item:hover{
+  transform: translateY(-10px);
 }
 
 .menu-item button {
   margin-top: auto;
+  background:#e07a2d;
+  border:none;
+  color:#fff;
+  padding:10px 30px;
+  border-radius: 4px;
+  font-weight:600;
+  cursor:pointer;
 }
 
 .menu-item img {
-  width: 200px;
+  width: 220px;
 }
 
 .quality {
-  padding: 80px 60px;
+  padding: 100px 60px;
   background: #1b1b1b;
   background-image: url('./img/fon2.png');
+  background-size: cover;
 }
+
+.quality h2 {
+  text-align: right;
+  margin-right: 200px;
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: 3px;
+} 
 
 .quality-items {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .quality-item {
@@ -134,36 +260,35 @@ button {
 
 .quality-item img {
   width: 70%;
-  
 }
 
-.quality h2 {
-  text-align: right;
-  margin-right: 200px;
-  font-size: 64px;
-} 
+.quality-item:last-child img{
+  margin-top: 40px;
+}
 
 .quality-item ul {
-  background: gray;
-  padding: 15px;
-  margin-top: 10px;
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  margin-top: 15px;
+  list-style: none;
 }
 
 .quality-item li {
-  list-style: none;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  opacity: .9;
 }
 
 .why {
   background: #0f0f0f;
   color: #fff;
-  padding: 80px 10%;
+  padding: 100px 10%;
   text-align: center;
 }
 
 .why h2 {
   font-weight: 300;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+  letter-spacing: 3px;
 }
 
 .why-list {
@@ -173,39 +298,44 @@ button {
   padding: 0;
 }
 
+.why-item {
+  width: 30%;
+  font-size: 22px;
+}
+
 .why-list img {
-  width: 70px;
+  width: 200px;
   margin-bottom: 15px;
 }
 
 .footer {
   background: #1c1c1c;
   color: #fff;
-  padding: 60px 10% 30px;
+  padding: 80px 10% 40px;
 }
 
 .footer-top {
   display: flex;
-  gap: 60px;
-  margin-bottom: 60px;
+  gap: 80px;
+  margin-bottom: 80px;
 }
 
 .location iframe {
-  width: 320px;
-  height: 220px;
+  width: 340px;
+  height: 240px;
   border: none;
 }
 
 .contacts {
   display: flex;
-  gap: 80px;
+  gap: 100px;
   font-style: normal;
 }
 
 .footer-bottom {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 40px;
+  gap: 50px;
 }
 
 .footer-bottom ul {
@@ -215,11 +345,12 @@ button {
 
 .footer-bottom li {
   opacity: 0.7;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 .brand h2 {
   font-weight: 300;
+  letter-spacing: 2px;
 }
 
 .brand p {
@@ -229,13 +360,14 @@ button {
 .copyright {
   text-align: center;
   opacity: 0.5;
+  margin-top: 40px;
 }
-.why-item {
-  width: 30%;
-  font-size: 24px;
+.quality-item:last-child img{
+  margin-top: 245px;
 }
-.why-list img {
-  width: 218.25px;
+.quality-item:nth-child(2) img{
+  margin-top: 75px;
 }
-
-
+.quality-item:nth-child(1) img{
+  margin-top: 50px;
+}
