@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Inter, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -353,4 +353,33 @@ body {
 .quality-item:nth-child(1) img{
      margin-top: 51px; }
 
+.quality-h2 {
+  font-family: 'Italiana', serif;
+}
+
+
+.why{
+  position: relative;
+  background: #0f0f0f;
+  padding: 120px 10%;
+  text-align: left;
+}
+
+.why-h2{
+  font-family: 'Italiana', serif;
+  font-size: 64px;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 5px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  max-width: 800px;
+}
+
+@media(max-width: 768px){
+  .why-h2{
+    font-size: 42px;
+  }
+}
 
